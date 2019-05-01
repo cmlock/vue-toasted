@@ -811,6 +811,9 @@ var parseOptions = function parseOptions(options) {
 	// get the icon pack name. defaults to material
 	options.iconPack = options.iconPack || 'material';
 
+	// get ARIA role attribute value
+	options.ariaRole = optins.ariaRole || null;
+
 	/* transform options */
 
 	// toast class
@@ -855,6 +858,11 @@ var createToast = function createToast(html, options) {
 		options.className.forEach(function (className) {
 			toast.classList.add(className);
 		});
+	}
+
+	// add ARIA role attribute if specified
+	if (options.ariaRole) {
+		toast.setAttribute('aria-role', options.ariaRole);
 	}
 
 	// If type of parameter is HTML Element
@@ -4354,7 +4362,7 @@ var content = __webpack_require__(9);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(23)("02af2e15", content, true, {});
+var update = __webpack_require__(23)("df0682cc", content, true, {});
 
 /***/ }),
 /* 23 */

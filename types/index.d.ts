@@ -102,7 +102,11 @@ interface ToastOptions {
   /**
    * Icon pack type to be used
    */
-  iconPack?: ToastIconPack|string
+  iconPack?: ToastIconPack|string,
+  /**
+   * ARIA role attribute value
+   */
+  ariaRole?: string
 }
 
 interface Toasted {

@@ -70,6 +70,9 @@ const parseOptions = function (options) {
 	// get the icon pack name. defaults to material
 	options.iconPack = options.iconPack || 'material';
 
+	// get ARIA role attribute value
+	options.ariaRole = optins.ariaRole || null;
+
 	/* transform options */
 
 	// toast class
@@ -116,6 +119,11 @@ const createToast = function (html, options) {
 		options.className.forEach((className) => {
 			toast.classList.add(className);
 		});
+	}
+
+	// add ARIA role attribute if specified
+	if (options.ariaRole) {
+		toast.setAttribute('aria-role', options.ariaRole);
 	}
 
 	// If type of parameter is HTML Element

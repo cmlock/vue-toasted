@@ -193,6 +193,7 @@ theme|String|'toasted-primary'|Theme of the toast you prefer<br> **['toasted-pri
 onComplete|Function|null|Trigger when toast is completed
 closeOnSwipe|Boolean|true|Closes the toast when the user swipes it
 singleton|Boolean|false| Only allows one toast at a time.
+ariaRole|String|null|Custom ARIA role attribute value
 
 ### Methods
 
