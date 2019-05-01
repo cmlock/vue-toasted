@@ -812,7 +812,7 @@ var parseOptions = function parseOptions(options) {
 	options.iconPack = options.iconPack || 'material';
 
 	// get ARIA role attribute value
-	options.ariaRole = optins.ariaRole || null;
+	options.ariaRole = options.ariaRole || null;
 
 	/* transform options */
 
