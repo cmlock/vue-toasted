@@ -78,7 +78,7 @@ interface ToastOptions {
   /**
    * Material icon name as string
    */
-  icon?: (ToastIcon: HTMLElement) => HTMLElement | string | { name: string, after: boolean },
+  icon?: string | ((ToastIcon: HTMLElement) => HTMLElement | string | { name: string, after: boolean }),
   /**
    * Type of the Toast ['success', 'info', 'error']. (default: 'default')
    */
